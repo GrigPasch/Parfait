@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 25px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background-image: url("https://www.foodmap.gr/img/avatars/parfait_123.jpg");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+}
+
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+    transition: 0.5s;
+}
+
+ul > li{
+    position: relative;
+    list-style: none;
+    width: 175px;
+    background: rgba(51, 205, 252, 0.6);
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+
+ul > li:hover{
+    background: rgba(202, 149, 1, 1);
+}
+
+li:hover:nth-child(1){
+    transform: translateX(-50px);
+}
+
+li:hover:nth-child(2){
+    transform: translateX(+50px);
+}
+
+li:hover:nth-child(3){
+    transform: translateX(-50px);
+}
+
+li:hover:nth-child(4){
+    transform: translateX(+50px);
+}
+
+li:hover:nth-child(5){
+    transform: translateX(-50px);
+}
+
+li:hover:nth-child(6){
+    transform: translateX(+50px);
+}
+
+ul > li:hover{
+    background: rgba(202, 149, 1, 1);
+}
+
+ul > li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+ul > li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+ul > li > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0, 0.9);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+ul > li:hover > a{
+    color: #fff;
+}
+ul > li:hover:nth-child(1)::before{
+    box-shadow: -100px 100px 20px rgb(0, 0, 0);
+}
+ul > li:hover:nth-child(2)::before{
+    box-shadow: -100px 100px 20px rgb(0, 0, 0);
+}
+ul > li:hover:nth-child(3)::before{
+    box-shadow: -100px 100px 20px rgb(0, 0, 0);
+}
+ul > li:hover:nth-child(4)::before{
+    box-shadow: -100px 100px 20px rgb(0, 0, 0);
+}
+ul > li:hover:nth-child(5)::before{
+    box-shadow: -100px 100px 20px rgb(0, 0, 0);
+}
+ul > li:last-child:hover::before{
+    box-shadow: -100px 100px 20px rgb(0, 0, 0);
+}
+
+ul > li:hover:nth-child(1)::after{
+    box-shadow: +100px -100px 25px rgba(202, 149, 1, 1);
+}
+ul > li:last-child:hover::after{
+    box-shadow: -100px 100px 15px rgba(202, 149, 1, 1);
+}
